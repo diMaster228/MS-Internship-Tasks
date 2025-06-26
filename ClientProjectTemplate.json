@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
+  "actions": [
+    {
+      "verb": "createSiteColumn",
+      "fieldType": "Text",
+      "internalName": "ProjectCode",
+      "displayName": "Project Code",
+      "isRequired": false,
+      "group": "Client Project Columns"
+    },
+    {
+      "verb": "createContentType",
+      "name": "Client Project Item",
+      "description": "Base content type for client project list items",
+      "parentName": "Item",
+      "group": "Client Content Types",
+      "hidden": false,
+      "subactions": [
+        {
+          "verb": "addSiteColumn",
+          "internalName": "ProjectCode"
+        }
+      ]
+    },
+    {
+      "verb": "createSPList",
+      "listName": "Project Registry",
+      "templateType": 100,
+      "subactions": [
+        {
+          "verb": "addContentType",
+          "name": "Client Project Item"
+        },
+        {
+          "verb": "removeContentType",
+          "name": "Item"
+        }
+      ]
+    }
+  ],
+  "bindata": {},
+  "version": 1
+}
