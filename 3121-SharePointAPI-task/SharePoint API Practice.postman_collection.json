@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "e6c6b062-84d8-4ea5-8fbb-ff751509f775",
+		"name": "SharePoint API Practice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "45520963"
+	},
+	"item": [
+		{
+			"name": "Get all items in Site Pages library",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://m365x17187790.sharepoint.com/sites/DmitryUrbanovich/_api/web/lists/GetByTitle('Site Pages')/items?$select=Id,Title,FileLeafRef",
+					"protocol": "https",
+					"host": [
+						"m365x17187790",
+						"sharepoint",
+						"com"
+					],
+					"path": [
+						"sites",
+						"DmitryUrbanovich",
+						"_api",
+						"web",
+						"lists",
+						"GetByTitle('Site Pages')",
+						"items"
+					],
+					"query": [
+						{
+							"key": "$select",
+							"value": "Id,Title,FileLeafRef"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all items in Discipline Pages library",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://m365x17187790.sharepoint.com/sites/MyKnowledgeBase/_api/web/lists/GetByTitle('Discipline Pages')/items?$select=Id,Title,FileLeafRef",
+					"protocol": "https",
+					"host": [
+						"m365x17187790",
+						"sharepoint",
+						"com"
+					],
+					"path": [
+						"sites",
+						"MyKnowledgeBase",
+						"_api",
+						"web",
+						"lists",
+						"GetByTitle('Discipline Pages')",
+						"items"
+					],
+					"query": [
+						{
+							"key": "$select",
+							"value": "Id,Title,FileLeafRef"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": {
+			"refreshTokenUrl": "",
+			"accessTokenUrl": "https://login.microsoftonline.com/m365x17187790.onmicrosoft.com/oauth2/v2.0/token",
+			"authUrl": "https://login.microsoftonline.com/m365x17187790.onmicrosoft.com/oauth2/v2.0/authorize",
+			"scope": "https://m365x17187790.sharepoint.com/AllSites.Read",
+			"refreshRequestParams": [],
+			"tokenRequestParams": [],
+			"authRequestParams": [],
+			"tokenName": "SharePoint API Token",
+			"challengeAlgorithm": "S256",
+			"redirect_uri": "https://oauth.pstmn.io/v1/callback",
+			"grant_type": "authorization_code",
+			"clientSecret": "mU98Q~KZ4SPxmes_aJR.bsZMeK106jhW-jj3Mano",
+			"clientId": "045757a6-25ab-4271-b780-bf4df59170f3",
+			"addTokenTo": "header",
+			"client_authentication": "header"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

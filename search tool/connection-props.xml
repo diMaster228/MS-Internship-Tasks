@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Connection-Props>
+  <spsiteurl>https://m365x17187790.sharepoint.com/sites/DmitryUrbanovich</spsiteurl>
+  <timeout>30</timeout>
+  <accept>json</accept>
+  <httpmethod>GET</httpmethod>
+  <authtype>1</authtype>
+  <authmethod>1</authmethod>
+  <experimental>false</experimental>
+</Connection-Props>
